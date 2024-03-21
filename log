@@ -45,3 +45,19 @@ Thu 21 Mar 2024 07:57:24 PM UTC:
  tests:  3|2
 total_score: 40/70
 6e78b96
+Thu 21 Mar 2024 08:04:35 PM UTC: 
+ exercises.c | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:98:22: error: ‘p1’ undeclared (first use in this function); did you mean ‘P1’?
+   98 |   void* dato = first(p1);
+      |                      ^~
+      |                      P1
+exercises.c:98:22: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:105:10: error: ‘p2’ undeclared (first use in this function); did you mean ‘P2’?
+  105 |     push(p2, dato);
+      |          ^~
+      |          P2
+Compilation failed
+9e7ad39
