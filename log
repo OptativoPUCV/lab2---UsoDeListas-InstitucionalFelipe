@@ -199,3 +199,20 @@ exercises.c:123:21: error: cast to pointer from integer of different size [-Werr
 cc1: all warnings being treated as errors
 Compilation failed
 32e6bfe
+Thu 21 Mar 2024 08:43:17 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:123:48: error: expected ‘)’ before ‘;’ token
+  123 |       pushBack(aux, (void*)malloc(sizeof(char));
+      |               ~                                ^
+      |                                                )
+exercises.c:128:6: error: expected ‘;’ before ‘}’ token
+  128 |     }
+      |      ^
+      |      ;
+  129 |   }
+      |   ~   
+Compilation failed
+cdd3b6f
