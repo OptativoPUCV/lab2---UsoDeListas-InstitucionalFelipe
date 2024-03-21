@@ -108,3 +108,32 @@ arraylist.h:14:18: note: expected ‘List *’ but argument is of type ‘char *
 cc1: all warnings being treated as errors
 Compilation failed
 cf98094
+Thu 21 Mar 2024 08:36:51 PM UTC: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:121:22: error: passing argument 1 of ‘first’ makes pointer from integer without a cast [-Werror=int-conversion]
+  121 |   char* dato = first(*cadena);
+      |                      ^~~~~~~
+      |                      |
+      |                      char
+In file included from exercises.c:6,
+                 from test.c:5:
+arraylist.h:10:19: note: expected ‘List *’ but argument is of type ‘char’
+   10 | void* first(List *L);
+      |             ~~~~~~^
+In file included from test.c:5:
+exercises.c:130:21: error: passing argument 1 of ‘next’ makes pointer from integer without a cast [-Werror=int-conversion]
+  130 |         dato = next(*cadena);
+      |                     ^~~~~~~
+      |                     |
+      |                     char
+In file included from exercises.c:6,
+                 from test.c:5:
+arraylist.h:14:18: note: expected ‘List *’ but argument is of type ‘char’
+   14 | void* next(List *L);
+      |            ~~~~~~^
+cc1: all warnings being treated as errors
+Compilation failed
+f303214
