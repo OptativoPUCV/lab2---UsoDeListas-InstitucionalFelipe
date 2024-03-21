@@ -95,7 +95,7 @@ Puedes usar una pila auxiliar.
 
 void copia_pila(Stack* P1, Stack* P2) {
   Stack* pilaAux = create_list();
-  void* dato = first(p1);
+  void* dato = first(P1);
   while(dato != NULL){
     push(pilaAux, dato);
     dato = next(P1);

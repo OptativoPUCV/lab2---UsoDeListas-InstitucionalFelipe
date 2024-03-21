@@ -73,3 +73,9 @@ exercises.c:98:22: error: ‘p1’ undeclared (first use in this function); did 
 exercises.c:98:22: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 c1eb20e
+Thu 21 Mar 2024 08:05:01 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  4|1
+total_score: 50/70
+1d0526c
