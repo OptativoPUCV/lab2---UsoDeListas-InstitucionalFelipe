@@ -79,3 +79,32 @@ Thu 21 Mar 2024 08:05:01 PM UTC:
  tests:  4|1
 total_score: 50/70
 1d0526c
+Thu 21 Mar 2024 08:36:40 PM UTC: 
+ exercises.c | 20 +++++++++++++++++++-
+ 1 file changed, 19 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:121:22: error: passing argument 1 of ‘first’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  121 |   char* dato = first(cadena);
+      |                      ^~~~~~
+      |                      |
+      |                      char *
+In file included from exercises.c:6,
+                 from test.c:5:
+arraylist.h:10:19: note: expected ‘List *’ but argument is of type ‘char *’
+   10 | void* first(List *L);
+      |             ~~~~~~^
+In file included from test.c:5:
+exercises.c:130:21: error: passing argument 1 of ‘next’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  130 |         dato = next(cadena);
+      |                     ^~~~~~
+      |                     |
+      |                     char *
+In file included from exercises.c:6,
+                 from test.c:5:
+arraylist.h:14:18: note: expected ‘List *’ but argument is of type ‘char *’
+   14 | void* next(List *L);
+      |            ~~~~~~^
+cc1: all warnings being treated as errors
+Compilation failed
+cf98094
