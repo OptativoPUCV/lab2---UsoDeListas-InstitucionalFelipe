@@ -137,3 +137,36 @@ arraylist.h:14:18: note: expected ‘List *’ but argument is of type ‘char�
 cc1: all warnings being treated as errors
 Compilation failed
 f303214
+Thu 21 Mar 2024 08:40:54 PM UTC: 
+ exercises.c | 18 ++++++------------
+ 1 file changed, 6 insertions(+), 12 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:121:22: error: passing argument 1 of ‘first’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  121 |   char* dato = first(cadena);
+      |                      ^~~~~~
+      |                      |
+      |                      char *
+In file included from exercises.c:6,
+                 from test.c:5:
+arraylist.h:10:19: note: expected ‘List *’ but argument is of type ‘char *’
+   10 | void* first(List *L);
+      |             ~~~~~~^
+In file included from test.c:5:
+exercises.c:124:27: error: passing argument 2 of ‘pushBack’ makes pointer from integer without a cast [-Werror=int-conversion]
+  124 |       pushBack(aux, cadena[i]);
+      |                     ~~~~~~^~~
+      |                           |
+      |                           char
+In file included from exercises.c:6,
+                 from test.c:5:
+arraylist.h:20:30: note: expected ‘void *’ but argument is of type ‘char’
+   20 | void pushBack(List *L, void *dato);
+      |                        ~~~~~~^~~~
+In file included from test.c:5:
+exercises.c:121:9: error: unused variable ‘dato’ [-Werror=unused-variable]
+  121 |   char* dato = first(cadena);
+      |         ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+e2b85d2
