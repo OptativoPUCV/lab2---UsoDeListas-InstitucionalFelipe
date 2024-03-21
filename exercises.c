@@ -42,8 +42,13 @@ Al finalizar retorna la lista creada.
 */
 
 List* crea_lista() {
-   List* L = create_list();
-   return L;
+  List* L = create_list();
+  for(int i = 1; i <= 10; i++){
+    int *dato = malloc(sizeof(int));//se genera una direccion de memoria que almacenara el numero.
+    *dato = i;
+    pushBack(L, dato);//se ingresa a la lista L la direccion de memoria del numero.
+  }
+     return L;
 }
 
 /*
