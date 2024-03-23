@@ -122,7 +122,7 @@ int parentesisBalanceados(char *cadena) {
   for(int i = 0; cadena[i] != '\0'; i++){
     
     if (cadena[i] == '(' || cadena[i] == '[' || cadena[i] == '{')
-      push(aux, (void*)malloc(sizeof(char)));
+      push(aux, (char*)malloc(sizeof(char)));
 
     else{
       if(top(aux) == NULL ||
