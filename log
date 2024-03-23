@@ -284,3 +284,29 @@ Sat 23 Mar 2024 09:33:20 PM UTC:
  tests:  7|1
 total_score: 60/70
 81ab125
+Sat 23 Mar 2024 09:41:28 PM UTC: 
+ exercises.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:129:25: error: comparison between pointer and integer [-Werror]
+  129 |         (char*)top(aux) == ')' && cadena[i] != '(' ||
+      |                         ^~
+exercises.c:129:32: error: suggest parentheses around ‘&&’ within ‘||’ [-Werror=parentheses]
+  129 |         (char*)top(aux) == ')' && cadena[i] != '(' ||
+      |         ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+exercises.c:130:25: error: comparison between pointer and integer [-Werror]
+  130 |         (char*)top(aux) == ']' && cadena[i] != '[' ||
+      |                         ^~
+exercises.c:130:32: error: suggest parentheses around ‘&&’ within ‘||’ [-Werror=parentheses]
+  130 |         (char*)top(aux) == ']' && cadena[i] != '[' ||
+      |         ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+exercises.c:131:25: error: comparison between pointer and integer [-Werror]
+  131 |         (char*)top(aux) == '}' && cadena[i] != '{')
+      |                         ^~
+exercises.c:131:32: error: suggest parentheses around ‘&&’ within ‘||’ [-Werror=parentheses]
+  131 |         (char*)top(aux) == '}' && cadena[i] != '{')
+      |         ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+eeafafc
