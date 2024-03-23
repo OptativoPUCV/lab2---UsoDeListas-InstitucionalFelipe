@@ -122,15 +122,17 @@ int parentesisBalanceados(char *cadena) {
   for(int i = 0; cadena[i] != '\0'; i++){
     
     if (cadena[i] == '(' || cadena[i] == '[' || cadena[i] == '{')
-      push(aux, &cadena[i]);
-      //push(aux, (char*)malloc(sizeof(char)));
+      char *nuevo = (char*)malloc(sizeof(char));
+      *nuevo = cadena[i]; 
+      push(aux, nuevo);
 
     else{
-      if(top(aux) == NULL ||
-        (char*)top(aux) == ')' && cadena[i] != '(' ||
-        (char*)top(aux) == ']' && cadena[i] != '[' ||
-        (char*)top(aux) == '}' && cadena[i] != '{')
-          return 0;
+      if(top(aux) == NULL)  return 0;
+
+      //char topChar = (char*)top(aux)
+      if(*(char*)top(aux) == ')' && cadena[i] != '(' ||
+         *(char*)top(aux) == ']' && cadena[i] != '[' ||
+         *(char*)top(aux) == '}' && cadena[i] != '{')) return 0;
         
       else pop(aux);
     } 
