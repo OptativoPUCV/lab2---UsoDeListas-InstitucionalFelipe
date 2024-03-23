@@ -121,10 +121,11 @@ int parentesisBalanceados(char *cadena) {
   
   for(int i = 0; cadena[i] != '\0'; i++){
     
-    if (cadena[i] == '(' || cadena[i] == '[' || cadena[i] == '{')
+    if (cadena[i] == '(' || cadena[i] == '[' || cadena[i] == '{'){
       char *nuevo = (char*)malloc(sizeof(char));
       *nuevo = cadena[i]; 
       push(aux, nuevo);
+    }
 
     else{
       if(top(aux) == NULL)  return 0;
