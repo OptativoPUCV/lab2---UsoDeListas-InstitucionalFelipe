@@ -652,3 +652,19 @@ exercises.c:141:19: error: expected ‘;’ before ‘}’ token
       |   ~                
 Compilation failed
 553f9d5
+Sat 23 Mar 2024 09:56:06 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:141:6: error: invalid suffix "dfgdffghfghfhgdfgdg" on integer constant
+  141 |     -77dfgdffghfghfhgdfgdg
+      |      ^~~~~~~~~~~~~~~~~~~~~
+exercises.c:141:27: error: expected ‘;’ before ‘}’ token
+  141 |     -77dfgdffghfghfhgdfgdg
+      |                           ^
+      |                           ;
+  142 |   }
+      |   ~                        
+Compilation failed
+0feb44e
