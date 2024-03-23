@@ -336,3 +336,29 @@ exercises.c:131:32: error: suggest parentheses around ‘&&’ within ‘||’ [
 cc1: all warnings being treated as errors
 Compilation failed
 47935c1
+Sat 23 Mar 2024 09:43:45 PM UTC: 
+ exercises.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:130:25: error: comparison between pointer and integer [-Werror]
+  130 |         (char*)top(aux) == ')' && cadena[i] != '(' ||
+      |                         ^~
+exercises.c:130:32: error: suggest parentheses around ‘&&’ within ‘||’ [-Werror=parentheses]
+  130 |         (char*)top(aux) == ')' && cadena[i] != '(' ||
+      |         ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+exercises.c:131:25: error: comparison between pointer and integer [-Werror]
+  131 |         (char*)top(aux) == ']' && cadena[i] != '[' ||
+      |                         ^~
+exercises.c:131:32: error: suggest parentheses around ‘&&’ within ‘||’ [-Werror=parentheses]
+  131 |         (char*)top(aux) == ']' && cadena[i] != '[' ||
+      |         ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+exercises.c:132:25: error: comparison between pointer and integer [-Werror]
+  132 |         (char*)top(aux) == '}' && cadena[i] != '{')
+      |                         ^~
+exercises.c:132:32: error: suggest parentheses around ‘&&’ within ‘||’ [-Werror=parentheses]
+  132 |         (char*)top(aux) == '}' && cadena[i] != '{')
+      |         ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+6cdf3dd
