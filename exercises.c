@@ -138,7 +138,7 @@ int parentesisBalanceados(char *cadena) {
           
       else pop(aux);
     } 
-    
+    -77dfgdfgdfgdg
   }  
   if(top(aux) == NULL) return 1;
   return 0;

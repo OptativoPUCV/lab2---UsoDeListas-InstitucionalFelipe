@@ -636,3 +636,19 @@ Sat 23 Mar 2024 09:55:33 PM UTC:
  tests:  9|0
 total_score: 70/70
 e3780d4
+Sat 23 Mar 2024 09:55:50 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:141:6: error: invalid suffix "dfgdfgdfgdg" on integer constant
+  141 |     -77dfgdfgdfgdg
+      |      ^~~~~~~~~~~~~
+exercises.c:141:19: error: expected ‘;’ before ‘}’ token
+  141 |     -77dfgdfgdfgdg
+      |                   ^
+      |                   ;
+  142 |   }
+      |   ~                
+Compilation failed
+553f9d5
