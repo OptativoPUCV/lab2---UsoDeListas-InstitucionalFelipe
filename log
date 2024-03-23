@@ -404,3 +404,39 @@ exercises.c:137:7: error: ‘else’ without a previous ‘if’
 cc1: all warnings being treated as errors
 Compilation failed
 179e8d1
+Sat 23 Mar 2024 09:48:02 PM UTC: 
+ exercises.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:125:7: error: expected expression before ‘char’
+  125 |       char *nuevo = (char*)malloc(sizeof(char));
+      |       ^~~~
+exercises.c:124:5: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+  124 |     if (cadena[i] == '(' || cadena[i] == '[' || cadena[i] == '{')
+      |     ^~
+exercises.c:126:7: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  126 |       *nuevo = cadena[i];
+      |       ^
+exercises.c:126:8: error: ‘nuevo’ undeclared (first use in this function)
+  126 |       *nuevo = cadena[i];
+      |        ^~~~~
+exercises.c:126:8: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:129:5: error: ‘else’ without a previous ‘if’
+  129 |     else{
+      |     ^~~~
+exercises.c:132:22: error: initialization of ‘char’ from ‘char *’ makes integer from pointer without a cast [-Werror=int-conversion]
+  132 |       char topChar = (char*)top(aux)
+      |                      ^
+exercises.c:133:7: error: expected ‘,’ or ‘;’ before ‘if’
+  133 |       if(topChar == ')' && cadena[i] != '(' ||
+      |       ^~
+exercises.c:137:7: error: ‘else’ without a previous ‘if’
+  137 |       else pop(aux);
+      |       ^~~~
+exercises.c:132:12: error: unused variable ‘topChar’ [-Werror=unused-variable]
+  132 |       char topChar = (char*)top(aux)
+      |            ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+d5754bc
