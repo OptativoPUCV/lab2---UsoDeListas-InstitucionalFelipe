@@ -610,3 +610,17 @@ exercises.c:138:7: error: ‘else’ without a previous ‘if’
 cc1: all warnings being treated as errors
 Compilation failed
 4d89c04
+Sat 23 Mar 2024 09:53:18 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:134:26: error: suggest parentheses around ‘&&’ within ‘||’ [-Werror=parentheses]
+  134 |       if(*topChar == ')' && cadena[i] != '(' ||
+      |          ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+exercises.c:136:25: error: suggest parentheses around ‘&&’ within ‘||’ [-Werror=parentheses]
+  136 |         *topChar == '}' && cadena[i] != '{') return 0;
+      |         ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+52c8b45
