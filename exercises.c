@@ -41,7 +41,7 @@ debes reservar memoria para cada elemento que agregues.
 Al finalizar retorna la lista creada.
 */
 
-List* crea_lista() {
+List* crea_lista() {//cambiar a pilas
   List* L = create_list();
   for(int i = 1; i <= 10; i++){
     int *dato = malloc(sizeof(int));//se genera una direccion de memoria que almacenara el numero.
@@ -94,16 +94,16 @@ Puedes usar una pila auxiliar.
 */
 
 void copia_pila(Stack* P1, Stack* P2) {
-  Stack* pilaAux = create_list();
-  void* dato = first(P1);
+  Stack* pilaAux = create_stack();
+  void* dato = pop(P1);
   while(dato != NULL){
     push(pilaAux, dato);
-    dato = next(P1);
+    void* dato = pop(P1);
   }
-  dato = first(pilaAux);
+  dato = pop(pilaAux);
   while(dato != NULL){
     push(P2, dato);
-    dato = next(pilaAux);
+    dato = pop(pilaAux);
   }
   
 }
